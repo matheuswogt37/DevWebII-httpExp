@@ -5,3 +5,14 @@
 🔹 Com HTTP Polling: O cliente faz requisições periódicas para verificar a atualização.
 🔹 Com WebSockets: O servidor notifica todos os clientes sempre que há uma mudança no estoque.
 🎯 Objetivo: Mostrar como WebSockets podem reduzir a sobrecarga do servidor em sistemas de atualização frequente.
+
+## Como iniciar?
+Instalar as dependências:
+```bash
+npm install
+```
+
+Iniciar o projeto:
+```bash
+npm run start
+```
