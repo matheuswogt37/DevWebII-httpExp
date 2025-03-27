@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Estoque</title>
+    
+</head>
+<body>
+    <style type="text/css">
+        span.offline {
+            color: red;
+        }
+
+        span.online {
+            color: green;
+        }
+    </style>
+    <h1>Monitoramento de Estoque</h1>
+
+    <hr/>
+
+    <!-- Polling -->
+    <section>
+        <h2>Polling estoque</h2>
+        <div>
+            <h3>Produto X</h3>
+            <p>Quantidade: <b><span id="pollingQtd">Carregando</span></b></p>
+            <div>
+                <button onclick="pollingBuy()">Comprar</button>
+                <button onclick="pollingAdd()">Adicionar</button>
+            </div>
+        </div>
+    </section>
+
+    <hr/>
+
+    <!-- WebSocket -->
+    <section>
+        <h2>WebSocket estoque</h2>
+        <p><span id="webSocketStatus" class="offline">Desconectado</span></p>
+        <div>
+            <button onclick="startWebSocket()">Iniciar conexão</button>
+            <button onclick="stopWebSocket()">Encerar conexão</button>
+        </div>
+        <div>
+            <h3>Produto Y</h3>
+            <p>Quantidade: <b><span id="webSocketQtd">Desconectado</span></b></p>
+            <div>
+                <button onclick="webSocketAction('buy')">Comprar</button>
+                <button onclick="webSocketAction('add')">Adicionar</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
